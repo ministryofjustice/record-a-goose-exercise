@@ -1,0 +1,38 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+When did you see the goose - Record a goose sighting
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <form class="form" action="/steps/check-your-answers" method="post">
+    
+      {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+      {{ govukDateInput({
+        id: "date-saw-goose",
+        namePrefix: "date-saw-goose",
+        fieldset: {
+          legend: {
+            text: "When did you see the goose?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
+        }, 
+        hint: {
+          text: "For example, 16 4 2017"
+        }
+      }) }}
+        
+      <button class="govuk-button">Continue</button>
+    
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

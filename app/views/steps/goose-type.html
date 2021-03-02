@@ -1,0 +1,32 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+Boop - Record a goose sighting
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      What type of goose did you see?
+    </h1>
+
+    <form class="form" action="/steps/date-saw-goose" method="post">
+      <p class="govuk-visually-hidden" tabindex="0">Ghost goose</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="goose-type">
+          Tell us what type of goose it was
+        </label>
+        <input class="govuk-input" placeholder="Black spur-winged goose" id="goose-type" name="goose-type" type="text">
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

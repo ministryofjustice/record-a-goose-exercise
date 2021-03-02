@@ -1,0 +1,19 @@
+{% extends "govuk/template.njk" %}
+
+{% block headIcons %}
+  <link rel="shortcut icon" href="{{ asset_path }}images/favicon.ico?0.18.3" type="image/x-icon" />
+  <link rel="mask-icon" href="{{ asset_path }}images/gov.uk_logotype_crown.svg?0.18.3" color="#0b0c0c">
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="{{ asset_path }}images/apple-touch-icon.png?0.18.3">
+
+{% endblock %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="all" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block header %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block bodyEnd %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
